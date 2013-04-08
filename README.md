@@ -1,0 +1,4 @@
+EsolvingEschoolCoreBundle
+=========================
+
+readme
