@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="">
+        <body>
+            <trans-unit id="this_value_does_not_equal_to_field">
+                <source>this_value_does_not_equal_to_field</source>
+                <target>This value does not equal to "{{ field }}" field</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

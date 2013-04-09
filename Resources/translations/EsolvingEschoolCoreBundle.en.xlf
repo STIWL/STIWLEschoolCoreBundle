@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="">
+        <body>
+            <trans-unit id="spanish">
+                <source>spanish</source>
+                <target>Spanish</target>
+            </trans-unit>
+            <trans-unit id="english">
+                <source>english</source>
+                <target>Englih</target>
+            </trans-unit>
+            <trans-unit id="french">
+                <source>french</source>
+                <target>French</target>
+            </trans-unit>
+            <trans-unit id="choose">
+                <source>choose</source>
+                <target>Choose</target>
+            </trans-unit>
+            <trans-unit id="new_password">
+                <source>new_password</source>
+                <target>New Password</target>
+            </trans-unit>
+            <trans-unit id="this_field_is_required">
+                <source>this_field_is_required</source>
+                <target>This field is required</target>
+            </trans-unit>
+            <trans-unit id="javascript_disabled">
+                <source>javascript_disabled</source>
+                <target>Javascript is disabled</target>
+            </trans-unit>
+            <trans-unit id="access_denied">
+                <source>access_denied</source>
+                <target>Access denied</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

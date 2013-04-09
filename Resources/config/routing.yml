@@ -1,0 +1,11 @@
+esolving_eschool_coreB_denied:
+    pattern: /{_locale}/denied
+    defaults: { _controller: EsolvingEschoolCoreBundle:Core:denied }
+
+esolving_eschool_coreB_javascript_disabled:
+    pattern: /{_locale}/javascript-disabled
+    defaults: { _controller: EsolvingEschoolCoreBundle:Core:javascriptDisabled }
+    
+esolving_eschool_coreB_set_language:
+    pattern: /{_locale}/set-languages/{route}
+    defaults: { _controller: EsolvingEschoolCoreBundle:Core:setLanguage }

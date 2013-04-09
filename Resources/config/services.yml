@@ -1,0 +1,29 @@
+parameters:
+    esolving_eschool_core.class: Esolving\Eschool\CoreBundle\Core\Core
+    esolving_eschool_core.validator.constraints.equals_fields.class: Esolving\Eschool\CoreBundle\Validator\Constraints\EqualsFieldsValidator
+    
+services:
+    esolving_eschool_core:
+        class: %esolving_eschool_core.class%
+        arguments: ['@translator','@service_container']
+        
+    esolving_eschool_core.validator.constraints.equals_fields:
+        class: %esolving_eschool_core.validator.constraints.equals_fields.class%
+        arguments: ['@translator']
+        tags:
+            - { name: validator.constraint_validator, alias: EqualsFieldsValidator }
+            
+    twig.extension.debug:
+        class: Twig_Extension_Debug
+        tags:
+            - { name: 'twig.extension' }
+          
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension } 
+            
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }            

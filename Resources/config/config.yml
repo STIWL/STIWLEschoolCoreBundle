@@ -1,0 +1,95 @@
+imports:
+    - { resource: '@EsolvingPageBundle/Resources/config/config.yml' }
+
+parameters:
+    esolving_page.menu_builder.class: Esolving\Eschool\Third\EsolvingPageBundle\Menu\MenuBuilder
+    
+# Doctrine Configuration
+doctrine:
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+           
+sonata_admin:
+    title: %global.esolving.project.eschool%
+    dashboard:
+            blocks:
+                # display a dashboard block
+                - { position: right, type: sonata.block.service.custom , settings: { content: "" } }               
+               
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
+
+        sonata.block.service.custom:
+        sonata.block.service.text:
+        sonata.block.service.rss: 
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:
+    
+knp_menu:
+    twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
+          template: knp_menu.html.twig
+    templating: false # if true, enables the helper for PHP templates
+    default_renderer: twig # The renderer to use, list is also available by default
+        
+sonata_media:
+    default_context: default
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+#                - sonata.media.provider.dailymotion
+#                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+#                - sonata.media.provider.file
+
+            formats:
+                headerImage: { width: 935 , quality: 70}
+                small: { width: 100 , quality: 70}
+                medium: { width: 200 , quality: 70}
+                big:   { width: 500 , quality: 70}
+
+    cdn:
+        server:
+            path: /web/uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false
+            
+esolving_page: 
+    project: E-School
+    developer: e-solving
+    website: http://www.e-solving.net/
+    enterprise_name: Farmacia
+    enterprise_money: s/
+    enterprise_google_map_latitude: -12.09223
+    enterprise_google_map_longitude: -77.00050
+    enterprise_slogan: Calidad y confianza
+    enterprise_email: luis22989@hotmail.com
+    enterprise_address: Av algo...
+    enterprise_phone: 998874663
+    enterprise_fax: ------
+    enterprise_others: ------
+    enterprise:
+      news: 
+        enabled: false
+        position: 0
+      contact_us:
+        enabled: false
+        position: 1
+      products:
+        enabled: false
+        position: 2
+      login:
+        enabled: true
+        position: last

@@ -1,0 +1,45 @@
+{
+    "name": "e-solving/eschool/core-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony EsolvingEschoolPageBundle PHP >=5.3.3",
+    "keywords": ["core", "school","website", "core school","type","languages","settings"],
+    "homepage": "https://github.com/e-solving/EsolvingEschoolCoreBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Alberto Sánchez Saldaña",
+            "email": "luis22989@hotmail.com",
+            "homepage": "http://www.e-solving.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "2.2.*",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "sonata-project/admin-bundle": "2.2.x-dev",
+        "sonata-project/block-bundle": "2.2.x-dev",
+        "sonata-project/cache-bundle": "2.1.x-dev",
+        "sonata-project/intl-bundle": "2.1.x-dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.x-dev",
+        "knplabs/knp-menu-bundle": "1.1.x-dev",
+        "knplabs/knp-paginator-bundle": "dev-master",
+        "sonata-project/media-bundle": "2.2.x-dev",
+        "sonata-project/notification-bundle": "2.2.*@dev",
+        "sonata-project/formatter-bundle": "2.2.*@dev",
+        "e-solving/page-bundle": "dev-master",
+        "egeloen/google-map-bundle": "dev-master",
+        "egeloen/google-map": "*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Esolving\\Eschool\\CoreBundle": ""
+        }
+    },
+    "target-dir": "Esolving/Eschool/CoreBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2.x-dev"
+        }
+    }
+}
